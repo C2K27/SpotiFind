@@ -1,0 +1,63 @@
+.bookmark {
+  position: relative;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color var(--duration-fast) var(--ease-soft),
+    background var(--duration-fast) var(--ease-soft),
+    transform var(--duration-fast) var(--ease-out);
+  transform: translateZ(0);
+}
+
+.bookmark:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.bookmark:active {
+  transform: scale(0.94);
+}
+
+.saved {
+  color: var(--accent-text);
+}
+
+.saved:hover {
+  color: var(--accent);
+}
+
+.animating {
+  animation: save-pop var(--duration-normal) var(--ease-out);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.saved .icon {
+  transform: scale(1.02);
+}
+
+.ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--accent-muted);
+  opacity: 0;
+  transform: scale(0.6);
+  pointer-events: none;
+}
+
+.rippleActive {
+  animation: success-flash 0.45s var(--ease-out) forwards;
+}

@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 72px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  contain: layout style;
+}
+
+.bar {
+  flex: 1;
+  max-width: 4px;
+  min-height: 4px;
+  border-radius: 2px;
+  background: var(--text-subtle);
+  transform-origin: center bottom;
+  will-change: transform;
+  transition: background var(--duration-normal) var(--ease-soft);
+}
+
+.active .bar {
+  background: var(--accent);
+}
+
+.listening .bar {
+  background: linear-gradient(
+    to top,
+    hsl(142 70% 38%),
+    hsl(142 65% 52%)
+  );
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 100%;
+    height: 64px;
+  }
+}

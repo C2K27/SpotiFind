@@ -1,0 +1,72 @@
+.group {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.option {
+  padding: 8px 16px;
+  min-height: 36px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    color var(--duration-fast) var(--ease-soft),
+    background var(--duration-fast) var(--ease-soft),
+    opacity var(--duration-fast) var(--ease-soft);
+}
+
+.option:hover:not(:disabled) {
+  color: var(--text-primary);
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.active {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.unavailable {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .option {
+    min-height: var(--touch-target);
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+.optionWithBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.optionLabel {
+  line-height: 1;
+}
+
+.experimental {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}

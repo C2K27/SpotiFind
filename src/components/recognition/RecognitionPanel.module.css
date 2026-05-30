@@ -1,0 +1,141 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 32px 24px 40px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.sub {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 28px 20px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 100%
+  );
+  border: 1px solid var(--border-subtle);
+  box-sizing: border-box;
+}
+
+.immersive {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 30%,
+    rgba(29, 185, 84, 0.05) 0%,
+    transparent 70%
+  );
+}
+
+.stateLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stateLabelActive {
+  color: var(--accent-text);
+}
+
+.stateLabelError {
+  color: var(--text-secondary);
+}
+
+.captureNote {
+  margin: 0;
+  max-width: 300px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-subtle);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    gap: 18px;
+    max-width: 100%;
+    padding: 16px 4px 8px;
+  }
+
+  .header {
+    gap: 12px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .sub {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .stage {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  .captureNote {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .hint {
+    padding: 0 8px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 12px 0 4px;
+    gap: 16px;
+  }
+
+  .stage {
+    padding: 16px 12px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="96" fill="#0a0a0a"/>
+  <!-- Magnifying glass ring -->
+  <circle cx="228" cy="208" r="132" stroke="#1DB954" stroke-width="44" fill="none"/>
+  <!-- Handle -->
+  <path d="M138 318 L72 384" stroke="#1DB954" stroke-width="44" stroke-linecap="round"/>
+  <!-- Inner Spotify circle -->
+  <circle cx="228" cy="208" r="78" fill="#1DB954"/>
+  <!-- Spotify sound waves -->
+  <path d="M168 188 C196 178 260 178 288 188" stroke="#0a0a0a" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M178 208 C200 200 248 200 270 208" stroke="#0a0a0a" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M192 228 C206 222 242 222 256 228" stroke="#0a0a0a" stroke-width="10" stroke-linecap="round" fill="none"/>
+</svg>

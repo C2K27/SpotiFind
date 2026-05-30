@@ -1,0 +1,168 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+  transition:
+    background var(--duration-fast) var(--ease-soft),
+    box-shadow var(--duration-normal) var(--ease-soft),
+    border-color var(--duration-fast) var(--ease-soft);
+}
+
+.card:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-raised);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardSaved {
+  border-color: var(--border-subtle);
+  background: var(--bg-elevated);
+}
+
+.cardSaved:hover {
+  background: var(--bg-hover);
+}
+
+.top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-subtle);
+  line-height: 1.4;
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.savedBadge {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cardSaved .savedBadge {
+  color: var(--accent-text);
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity var(--duration-fast) var(--ease-soft),
+    background var(--duration-fast) var(--ease-soft),
+    color var(--duration-fast) var(--ease-soft);
+}
+
+.delete svg {
+  width: 14px;
+  height: 14px;
+}
+
+.card:hover .delete,
+.card:focus-within .delete {
+  opacity: 1;
+}
+
+.delete:hover {
+  background: var(--bg-active);
+  color: var(--text-primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 14px;
+  }
+
+  .delete {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .artist {
+    font-size: 12px;
+  }
+}

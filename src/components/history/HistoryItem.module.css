@@ -1,0 +1,127 @@
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: background var(--duration-fast) var(--ease-soft);
+}
+
+.row:hover {
+  background: var(--bg-hover);
+}
+
+.rowSaved {
+  border-color: transparent;
+  background: transparent;
+}
+
+.rowSaved:hover {
+  background: var(--bg-hover);
+}
+
+.info {
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-subtle);
+}
+
+.dot {
+  width: 2px;
+  height: 2px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+  opacity: 0.5;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delete {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity var(--duration-fast) var(--ease-soft),
+    background var(--duration-fast) var(--ease-soft);
+}
+
+.delete svg {
+  width: 14px;
+  height: 14px;
+}
+
+.row:hover .delete,
+.row:focus-within .delete {
+  opacity: 1;
+}
+
+.delete:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.removing {
+  animation: card-out 0.22s var(--ease-soft) forwards;
+  pointer-events: none;
+}
+
+@keyframes card-out {
+  to {
+    opacity: 0;
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .actions {
+    grid-column: 2;
+    justify-content: flex-start;
+    padding-left: 52px;
+  }
+}

@@ -1,0 +1,61 @@
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --bg-base: #0a0a0a;
+  --bg-elevated: #121212;
+  --bg-surface: #181818;
+  --bg-hover: #282828;
+  --bg-active: #333333;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #727272;
+  --text-subtle: #535353;
+
+  --accent: #1db954;
+  --accent-hover: #1ed760;
+  --accent-muted: rgba(29, 185, 84, 0.1);
+  --accent-text: rgba(30, 215, 96, 0.72);
+  --accent-glow: rgba(29, 185, 84, 0.35);
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-raised: rgba(255, 255, 255, 0.08);
+  --border-focus: #1db954;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.32);
+  --shadow-card-hover: 0 6px 20px rgba(0, 0, 0, 0.38);
+  --shadow-glow: 0 0 40px rgba(29, 185, 84, 0.12);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 140ms;
+  --duration-normal: 220ms;
+  --duration-slow: 380ms;
+
+  --sidebar-width: 240px;
+  --header-height: 56px;
+  --mobile-nav-height: 60px;
+  --touch-target: 44px;
+
+  --breakpoint-mobile: 768px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+  }
+}

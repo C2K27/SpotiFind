@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="description" content="SpotiFind — identify songs playing around you with microphone or system audio capture." />
+    <meta name="application-name" content="SpotiFind" />
+    <meta name="theme-color" content="#1db954" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SpotiFind" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>SpotiFind — Identify Any Song</title>
+
+    <link rel="icon" type="image/svg+xml" href="/spotifind-icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SpotiFind" />
+    <meta property="og:title" content="SpotiFind — Identify Any Song" />
+    <meta property="og:description" content="Point your device toward the music and identify what's playing. Microphone and system audio capture supported." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:alt" content="SpotiFind logo — magnifying glass with Spotify icon" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SpotiFind — Identify Any Song" />
+    <meta name="twitter:description" content="Point your device toward the music and identify what's playing." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image:alt" content="SpotiFind logo — magnifying glass with Spotify icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: #0a0a0a;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      #app-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      #app-loader img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+      }
+      #app-loader p {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #727272;
+        letter-spacing: -0.01em;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #app-loader {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app-loader" role="status" aria-label="Loading SpotiFind">
+      <img src="/spotifind-logo.png" width="72" height="72" alt="" />
+      <p>SpotiFind</p>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.addEventListener('load', function () {
+        var loader = document.getElementById('app-loader')
+        if (loader) loader.classList.add('hidden')
+      })
+    </script>
+  </body>
+</html>
