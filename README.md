@@ -5,6 +5,10 @@ Find songs instantly and save them directly to Spotify.
 
 SpotiFind listens to music from your microphone or system audio, identifies the track, and lets you add it to your Spotify library in seconds.
 
+### Live Demo
+[PREVIEW](https://spoti-find-ochre.vercel.app/)
+
+
 ## Features
 
 * Song recognition
