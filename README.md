@@ -1,4 +1,4 @@
-# SpotiFind
+# SpotiFind [CONCEPT]
 <img width="2095" height="751" alt="Banner" src="https://github.com/user-attachments/assets/b9e71135-dac4-45b9-ac1d-98e57db2dc61" />
 
 Find songs instantly and save them directly to Spotify.
